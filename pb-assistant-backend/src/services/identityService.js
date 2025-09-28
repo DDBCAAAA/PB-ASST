@@ -22,6 +22,19 @@ const exchangeCodeForProfile = async (providerInput, code) => {
   }
 
   const mockMode = process.env.AUTH_MOCK_MODE === 'true' || process.env.WECHAT_MOCK_MODE === 'true';
+  const mockCodePrefixes = {
+    wechat: 'wechat-mock',
+    google: 'google-mock',
+    apple: 'apple-mock',
+  };
+
+  const isImplicitMock = mockCodePrefixes[provider]
+    ? String(code).toLowerCase().startsWith(mockCodePrefixes[provider])
+    : false;
+
+  if (mockMode || isImplicitMock) {
+    return createMockProfile(provider, code);
+  }
 
   if (provider === 'guest') {
     return {
@@ -30,10 +43,6 @@ const exchangeCodeForProfile = async (providerInput, code) => {
       displayName: 'Guest Runner',
       avatarUrl: 'https://placehold.co/128x128',
     };
-  }
-
-  if (mockMode) {
-    return createMockProfile(provider, code);
   }
 
   if (provider === 'wechat') {
