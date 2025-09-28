@@ -14,6 +14,7 @@ const buildSessionUser = (user, provider) => ({
 
 const authConfig = {
   trustHost: true,
+  basePath: '/api/auth',
   secret: process.env.AUTH_SECRET || process.env.JWT_SECRET || 'development-secret',
   session: {
     strategy: 'jwt',
