@@ -7,17 +7,34 @@ const normalizeBaseUrl = (value) => {
     return value.replace(/\/+$/, '');
   }
 
+  if (!value.startsWith('http') && !value.startsWith('/')) {
+    return `/${value}`;
+  }
+
   return value;
 };
 
 const API_BASE_URL = (() => {
   const envUrl = normalizeBaseUrl(process.env.EXPO_PUBLIC_API_URL);
-  if (envUrl) {
-    return envUrl;
+  const isBrowser = typeof window !== 'undefined';
+
+  if (isBrowser) {
+    if (envUrl) {
+      try {
+        const resolved = new URL(envUrl, window.location.origin);
+        if (resolved.origin === window.location.origin) {
+          const browserPath = normalizeBaseUrl(resolved.pathname);
+          return browserPath || '/api';
+        }
+      } catch (_err) {
+        // If the env URL cannot be parsed in the browser, fall back to relative fetches.
+      }
+    }
+    return '/api';
   }
 
-  if (typeof window !== 'undefined') {
-    return '/api';
+  if (envUrl) {
+    return envUrl;
   }
 
   return 'http://localhost:3000/api';
