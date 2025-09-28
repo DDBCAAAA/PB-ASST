@@ -1,5 +1,13 @@
-const { Auth } = require('@auth/core');
-const { authConfig } = require('./options');
+const { getAuthConfig } = require('./options');
+
+let authModulePromise;
+
+const loadAuthModule = async () => {
+  if (!authModulePromise) {
+    authModulePromise = import('@auth/core');
+  }
+  return authModulePromise;
+};
 
 const buildRequestFromExpress = (req) => {
   const protocol = req.protocol || (req.socket.encrypted ? 'https' : 'http');
@@ -72,6 +80,7 @@ const sendResponseFromFetch = async (res, response) => {
 
 const authHandler = async (req, res, next) => {
   try {
+    const [{ Auth }, authConfig] = await Promise.all([loadAuthModule(), getAuthConfig()]);
     const request = buildRequestFromExpress(req);
     const response = await Auth(request, authConfig);
     await sendResponseFromFetch(res, response);
