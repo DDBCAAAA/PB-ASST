@@ -157,3 +157,15 @@ This plan outlines the steps to build an AI-powered running coach mobile app.
     *   **Logic:**
         *   Use a library like `react-native-view-shot` to capture the "Share Card" component as an image.
         *   Use a sharing library to allow the user to share the captured image directly to WeChat Moments or a chat.
+
+---
+
+### **Phase 6: Deployment Debugging**
+
+**Objective:** Restore API connectivity for the Vercel-hosted web client.
+
+**Tasks:**
+
+1.  [x] Investigate the Vercel deployment API failures and identify the root cause.
+2.  [x] Implement the necessary frontend configuration fix to resolve the API base URL for production.
+3.  [x] Validate the fix locally (including build) and outline next deployment steps.

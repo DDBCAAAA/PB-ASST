@@ -1,4 +1,14 @@
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+const API_BASE_URL = (() => {
+  if (process.env.EXPO_PUBLIC_API_URL) {
+    return process.env.EXPO_PUBLIC_API_URL;
+  }
+
+  if (typeof window !== 'undefined') {
+    return '/api';
+  }
+
+  return 'http://localhost:3000/api';
+})();
 
 const defaultHeaders = {
   'Content-Type': 'application/json',
