@@ -37,6 +37,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.all('/api/auth', authHandler);
+app.all('/api/auth/:authAction', authHandler);
+app.all('/api/auth/:authAction/:provider', authHandler);
 app.use('/api/auth', authHandler);
 app.use('/api', apiRouter);
 
