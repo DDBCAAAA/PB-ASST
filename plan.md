@@ -169,3 +169,5 @@ This plan outlines the steps to build an AI-powered running coach mobile app.
 1.  [x] Investigate the Vercel deployment API failures and identify the root cause.
 2.  [x] Implement the necessary frontend configuration fix to resolve the API base URL for production.
 3.  [x] Validate the fix locally (including build) and outline next deployment steps.
+4.  [x] Resolve the remaining production CORS/preflight failure hitting `/auth/oauth`.
+5.  [x] Rebuild and document verification steps post-fix.

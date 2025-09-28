@@ -1,6 +1,19 @@
+const normalizeBaseUrl = (value) => {
+  if (!value) {
+    return value;
+  }
+
+  if (value.endsWith('/')) {
+    return value.replace(/\/+$/, '');
+  }
+
+  return value;
+};
+
 const API_BASE_URL = (() => {
-  if (process.env.EXPO_PUBLIC_API_URL) {
-    return process.env.EXPO_PUBLIC_API_URL;
+  const envUrl = normalizeBaseUrl(process.env.EXPO_PUBLIC_API_URL);
+  if (envUrl) {
+    return envUrl;
   }
 
   if (typeof window !== 'undefined') {
@@ -34,7 +47,7 @@ export const request = async (path, options = {}) => {
     finalBody = JSON.stringify(body);
   }
 
-  const response = await fetch(`${API_BASE_URL}${path}`, {
+  const response = await fetch(`${API_BASE_URL}${path.startsWith('/') ? '' : '/'}${path}`, {
     method: upperMethod,
     headers: finalHeaders,
     body: upperMethod === 'GET' || upperMethod === 'HEAD' ? undefined : finalBody,
