@@ -1,0 +1,38 @@
+Phase 1 (Backend + Frontend web) quick-start
+
+Prerequisites:
+- Node.js  (already installed)
+- npm      (ships with Node)
+
+1. Backend (runs in in-memory mode by default)
+   ----------------------------------------------------
+   cd pb-assistant-backend
+   cp .env.example .env      # optional; keeps mock settings
+   npm start
+
+   -> Server listens on http://localhost:3000
+
+2. Frontend (Expo web)
+   ----------------------------------------------------
+   In a new terminal:
+   cd pb-assistant-frontend
+   cp .env.example .env      # provides Expo public env vars
+   npm run web
+
+   Expo will print a local web URL (typically http://localhost:19006).
+   Open it in your browser.
+
+   • “Login with WeChat” uses mock codes; toggle EXPO_PUBLIC_ENABLE_WECHAT_MOCK=false once a real native SDK is configured.
+   • Google login requires populating EXPO_PUBLIC_GOOGLE_* IDs, then reloading.
+   • Apple Sign-In works only on Apple devices/browsers that support it.
+
+3. Flow to test
+   ----------------------------------------------------
+   - Click “Login with WeChat” → issues a mock code → backend returns JWT
+   - Onboarding wizard captures metrics and saves profile (in-memory store)
+   - Dashboard reflects stored profile
+
+4. Stopping services
+   ----------------------------------------------------
+   Ctrl+C in each terminal window.
+

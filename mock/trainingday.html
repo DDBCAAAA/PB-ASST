@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<title>PB助手 - 选择训练日</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0f6cbd",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="p-4 flex items-center justify-center">
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">PB助手</h1>
+</header>
+<main class="flex-grow flex flex-col px-4">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">选择您的训练日</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8">请选择您本周可以跑步的日子。</p>
+<div class="space-y-4">
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周一</span>
+<input class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周二</span>
+<input class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周三</span>
+<input checked="" class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周四</span>
+<input class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周五</span>
+<input checked="" class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周六</span>
+<input class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-slate-800/50 has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary transition-all duration-200 cursor-pointer">
+<span class="text-base font-medium text-slate-900 dark:text-white">周日</span>
+<input checked="" class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 bg-transparent text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</label>
+</div>
+</main>
+<footer class="p-4 pb-8 sticky bottom-0 bg-background-light dark:bg-background-dark">
+<button class="w-full h-14 rounded-lg bg-primary text-white text-lg font-bold flex items-center justify-center shadow-lg shadow-primary/30">
+        开始训练
+      </button>
+</footer>
+</div>
+
+</body></html>

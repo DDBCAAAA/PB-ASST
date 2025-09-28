@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PB助手 - Adjust Training Plan</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0f6cbd",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              "display": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-white">
+<div class="relative flex h-screen min-h-screen w-full flex-col justify-between">
+<div class="flex-grow overflow-y-auto pb-28">
+<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+<button class="flex h-10 w-10 items-center justify-center">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold">Adjust Training Plan</h1>
+<div class="w-10"></div>
+</header>
+<main class="p-4">
+<section class="mb-6">
+<h2 class="text-xl font-bold mb-3">Workout Details</h2>
+<div class="space-y-2 rounded-xl bg-background-light p-3 shadow-sm dark:bg-zinc-800/20">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<p class="font-medium text-zinc-900 dark:text-white">Sunday, July 21</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Long Run</p>
+</div>
+</div>
+<div class="my-2 border-t border-zinc-200 dark:border-zinc-700/50"></div>
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<div>
+<p class="font-medium text-zinc-900 dark:text-white">Distance</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">10 km</p>
+</div>
+</div>
+<div class="my-2 border-t border-zinc-200 dark:border-zinc-700/50"></div>
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<div>
+<p class="font-medium text-zinc-900 dark:text-white">Pace</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">5:30 min/km</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-6">
+<h2 class="text-xl font-bold mb-3">Adjustments</h2>
+<div class="space-y-px overflow-hidden rounded-xl bg-background-light shadow-sm dark:bg-zinc-800/20">
+<a class="flex items-center justify-between bg-background-light p-4 dark:bg-zinc-900/40" href="#">
+<p class="font-medium text-zinc-900 dark:text-white">Reschedule Workout</p>
+<span class="material-symbols-outlined text-zinc-400 dark:text-zinc-500">chevron_right</span>
+</a>
+<div class="border-t border-zinc-200 dark:border-zinc-700/50"></div>
+<a class="flex items-center justify-between bg-background-light p-4 dark:bg-zinc-900/40" href="#">
+<p class="font-medium text-zinc-900 dark:text-white">Adjust Intensity</p>
+<span class="material-symbols-outlined text-zinc-400 dark:text-zinc-500">chevron_right</span>
+</a>
+<div class="border-t border-zinc-200 dark:border-zinc-700/50"></div>
+<div class="flex items-center justify-between bg-background-light p-4 dark:bg-zinc-900/40">
+<p class="font-medium text-zinc-900 dark:text-white">Mark as Rest Day</p>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-zinc-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-zinc-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:bg-zinc-700 dark:border-zinc-600 dark:peer-focus:ring-primary/80"></div>
+</label>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-3">AI Suggestion</h2>
+<div class="rounded-xl bg-primary/10 p-4 dark:bg-primary/20">
+<p class="text-sm text-zinc-800 dark:text-zinc-200">Based on your recent feedback, we suggest reducing the distance to 8 km to prevent overtraining.</p>
+<div class="mt-4 flex justify-end">
+<button class="flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white shadow-md transition-transform active:scale-95">Apply Suggestion</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<nav class="absolute bottom-0 left-0 right-0 border-t border-zinc-200/50 bg-background-light/90 backdrop-blur-sm dark:border-zinc-800/50 dark:bg-background-dark/90">
+<div class="flex justify-around py-2">
+<a class="flex flex-col items-center gap-1 p-2 text-zinc-500 dark:text-zinc-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 rounded-full p-2 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="text-xs font-bold">Plan</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-zinc-500 dark:text-zinc-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+<div class="h-safe-area-inset-bottom"></div>
+</nav>
+</div>
+
+</body></html>

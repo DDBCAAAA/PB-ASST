@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<title>PB助手 - Training Plan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0f6cbd",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-white pr-6">训练计划</h1>
+</div>
+</header>
+<main class="p-4 space-y-6">
+<div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">目标赛事</h2>
+<div class="flex items-center gap-4 rounded-lg bg-white/10 dark:bg-slate-800/50 p-4">
+<div class="flex-shrink-0 size-12 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">emoji_events</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">上海马拉松</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">全程马拉松</p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">计划概览</h2>
+<div class="space-y-2">
+<div class="flex items-center gap-4 rounded-lg bg-white/10 dark:bg-slate-800/50 p-3 relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary/20" style="width: 80%;"></div>
+<div class="relative flex-shrink-0 size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                1
+              </div>
+<div class="relative flex-1">
+<p class="font-bold text-slate-900 dark:text-white">第一周: 基础建立</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">45公里・已完成 36公里</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 relative">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-white/10 dark:bg-slate-800/50 p-3 relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary/20" style="width: 25%;"></div>
+<div class="relative flex-shrink-0 size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                2
+              </div>
+<div class="relative flex-1">
+<p class="font-bold text-slate-900 dark:text-white">第二周: 耐力重点</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">50公里・已完成 12.5公里</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 relative">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-slate-200/50 dark:bg-slate-800/30 p-3 opacity-60">
+<div class="flex-shrink-0 size-10 rounded-full border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-500 font-bold">
+                    3
+                </div>
+<div class="flex-1">
+<p class="font-bold text-slate-700 dark:text-slate-400">第三周: 速度训练</p>
+<p class="text-sm text-slate-500 dark:text-slate-500">55公里</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-600">lock</span>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-slate-200/50 dark:bg-slate-800/30 p-3 opacity-60">
+<div class="flex-shrink-0 size-10 rounded-full border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-500 font-bold">
+                    4
+                </div>
+<div class="flex-1">
+<p class="font-bold text-slate-700 dark:text-slate-400">第四周: 高峰周</p>
+<p class="text-sm text-slate-500 dark:text-slate-500">60公里</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-600">lock</span>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-slate-200/50 dark:bg-slate-800/30 p-3 opacity-60">
+<div class="flex-shrink-0 size-10 rounded-full border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-500 font-bold">
+                    5
+                </div>
+<div class="flex-1">
+<p class="font-bold text-slate-700 dark:text-slate-400">第五周: 减量</p>
+<p class="text-sm text-slate-500 dark:text-slate-500">40公里</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-600">lock</span>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-slate-200/50 dark:bg-slate-800/30 p-3 opacity-60">
+<div class="flex-shrink-0 size-10 rounded-full border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-500 font-bold">
+                    6
+                </div>
+<div class="flex-1">
+<p class="font-bold text-slate-700 dark:text-slate-400">第六周: 比赛周</p>
+<p class="text-sm text-slate-500 dark:text-slate-500">比赛日</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-600">lock</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10">
+<div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-slate-200/50 dark:border-slate-800/50 px-4 pt-2 pb-5">
+<nav class="flex justify-around">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">主页</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined">event_note</span>
+<span class="text-xs font-medium">计划</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">我的</span>
+</a>
+</nav>
+</div>
+</footer>
+</div>
+
+</body></html>

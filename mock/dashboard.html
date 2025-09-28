@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0f6cbd",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4">
+<div class="w-10"></div>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-white">PB助手</h1>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-700 hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-700">
+<svg class="h-6 w-6" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path>
+</svg>
+</button>
+</header>
+<main class="px-4 pb-4">
+<div class="mx-auto max-w-sm">
+<div class="mb-4">
+<div class="flex items-center justify-between py-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-600 hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700">
+<svg class="h-5 w-5" fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+<path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+</svg>
+</button>
+<p class="text-base font-bold text-slate-900 dark:text-white">2024年5月</p>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-600 hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700">
+<svg class="h-5 w-5" fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+<path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+</svg>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">日</p>
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">一</p>
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">二</p>
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">三</p>
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">四</p>
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">五</p>
+<p class="h-10 w-full p-2 text-xs font-bold uppercase text-slate-500 dark:text-slate-400">六</p>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-500 dark:text-slate-400 col-start-4">1</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-500 dark:text-slate-400">2</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-500 dark:text-slate-400">3</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-500 dark:text-slate-400">4</button>
+<button class="h-10 w-full rounded-full bg-primary text-sm font-medium text-white">5</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">6</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">7</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">8</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">9</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">10</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">11</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">12</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">13</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">14</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">15</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">16</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">17</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">18</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">19</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">20</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">21</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">22</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">23</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">24</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">25</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">26</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">27</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">28</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">29</button>
+<button class="h-10 w-full rounded-full text-sm font-medium text-slate-900 hover:bg-slate-200 dark:text-white dark:hover:bg-slate-700">30</button>
+</div>
+</div>
+<h2 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">今天的训练</h2>
+<div class="mb-4 rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary dark:bg-primary/30">
+<svg class="h-6 w-6" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208.06,184H152a8,8,0,0,0-8,8v12a36,36,0,0,0,72.05,0V192A8,8,0,0,0,208.06,184Zm-8,20a20,20,0,0,1-40,0v-4h40ZM104,160h-56a8,8,0,0,0-8,8v12A36,36,0,0,0,112,180V168A8,8,0,0,0,104,160Zm-8,20a20,20,0,0,1-40,0v-4H96ZM76,16C64.36,16,53.07,26.31,44.2,45c-13.93,29.38-18.56,73,.29,96a8,8,0,0,0,6.2,2.93h50.55a8,8,0,0,0,6.2-2.93c18.85-23,14.22-66.65.29-96C98.85,26.31,87.57,16,76,16ZM97.15,128H54.78c-11.4-18.1-7.21-52.7,3.89-76.11C65.14,38.22,72.17,32,76,32s10.82,6.22,17.3,19.89C104.36,75.3,108.55,109.9,97.15,128Zm57.61,40h50.55a8,8,0,0,0,6.2-2.93c18.85-23,14.22-66.65.29-96C202.93,50.31,191.64,40,180,40s-22.89,10.31-31.77,29c-13.93,29.38-18.56,73,.29,96A8.05,8.05,0,0,0,154.76,168Zm8-92.11C169.22,62.22,176.25,56,180,56s10.82,6.22,17.29,19.89c11.1,23.41,15.29,58,3.9,76.11H158.85C147.45,133.9,151.64,99.3,162.74,75.89Z"></path>
+</svg>
+</div>
+<div>
+<p class="text-base font-bold text-slate-900 dark:text-white">8公里 · 节奏跑</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">4:30/km</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+<div class="rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
+<p class="mb-1 text-base font-medium text-slate-600 dark:text-slate-300">PB信心分数</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">85%</p>
+</div>
+<div class="rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
+<div class="mb-1 flex items-baseline justify-between">
+<p class="text-base font-medium text-slate-600 dark:text-slate-300">训练进度</p>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">第3周/共12周</p>
+</div>
+<div class="h-2 w-full rounded-full bg-slate-300 dark:bg-slate-700">
+<div class="h-2 rounded-full bg-primary" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 border-t border-slate-200 bg-background-light/80 backdrop-blur-sm dark:border-slate-800 dark:bg-background-dark/80">
+<nav class="flex items-center justify-around px-4 pb-2 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<svg class="h-6 w-6" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+<p class="text-xs font-medium">首页</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<svg class="h-6 w-6" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"></path>
+</svg>
+<p class="text-xs font-medium">计划</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<svg class="h-6 w-6" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+<p class="text-xs font-medium">我的</p>
+</a>
+</nav>
+<div class="h-3 bg-transparent"></div>
+</footer>
+</div>
+
+</body></html>

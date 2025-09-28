@@ -1,0 +1,7 @@
+
+> pb-assistant-backend@1.0.0 start
+> node src/server.js
+
+[dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+DATABASE_URL not set. Database connection is not initialized.
+PB Assistant backend listening on port 3000

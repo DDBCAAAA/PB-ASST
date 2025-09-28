@@ -1,0 +1,23 @@
+
+> pb-assistant-frontend@1.0.0 web
+> expo start --web --port 19006
+
+Starting project at /Users/zhengdongqian/PB ASST/pb-assistant-frontend
+/Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/expo/node_modules/@expo/cli/build/src/utils/errors.js:130
+    throw error;
+    ^
+
+RangeError [ERR_SOCKET_BAD_PORT]: options.port should be >= 0 and < 65536. Received type number (65536).
+    at Server.listen (node:net:2091:5)
+    at /Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/freeport-async/index.js:8:12
+    at new Promise (<anonymous>)
+    at testPortAsync (/Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/freeport-async/index.js:6:10)
+    at availableAsync (/Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/freeport-async/index.js:24:17)
+    at /Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/freeport-async/index.js:37:23
+    at new Promise (<anonymous>)
+    at freePortRangeAsync (/Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/freeport-async/index.js:33:10)
+    at /Users/zhengdongqian/PB ASST/pb-assistant-frontend/node_modules/freeport-async/index.js:43:18 {
+  code: 'ERR_SOCKET_BAD_PORT'
+}
+
+Node.js v24.9.0

@@ -1,0 +1,3 @@
+- Follow the plan.md for the implementation and order. Do one step at a time. Once you complete a step, please confirm with me that step is verified. And mark that step as complete in the plan.md.
+- Refer to mock/ for visual design.
+- Run build command to ensure no build error before you complete a step.

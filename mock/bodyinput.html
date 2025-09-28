@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PB助手 - Body Metrics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f6cbd",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen flex-col justify-between p-6">
+<div class="flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">1 of 3</p>
+<button class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+</svg>
+</button>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-8">
+<div class="bg-primary h-1.5 rounded-full" style="width: 33%"></div>
+</div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">告诉我们关于您的信息</h1>
+<div class="space-y-4">
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-background-dark px-1 text-xs font-medium text-gray-500 dark:text-gray-400" for="height">身高 (cm)</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent px-4 py-3.5 text-gray-900 dark:text-white focus:border-primary focus:ring-primary" id="height" placeholder="例如: 175" type="number"/>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-background-dark px-1 text-xs font-medium text-gray-500 dark:text-gray-400" for="weight">体重 (kg)</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent px-4 py-3.5 text-gray-900 dark:text-white focus:border-primary focus:ring-primary" id="weight" placeholder="例如: 68" type="number"/>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-background-dark px-1 text-xs font-medium text-gray-500 dark:text-gray-400" for="age">年龄</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent px-4 py-3.5 text-gray-900 dark:text-white focus:border-primary focus:ring-primary" id="age" placeholder="例如: 28" type="number"/>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-background-dark px-1 text-xs font-medium text-gray-500 dark:text-gray-400" for="gender">性别</label>
+<select class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent px-4 py-3.5 text-gray-900 dark:text-white focus:border-primary focus:ring-primary appearance-none" id="gender">
+<option disabled="" selected="" value="">选择性别</option>
+<option value="male">男</option>
+<option value="female">女</option>
+<option value="other">其他</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-400">
+<svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-4">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300">下一步</button>
+</div>
+</div>
+
+</body></html>
