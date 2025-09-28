@@ -1,6 +1,7 @@
 const express = require('express');
 const apiRouter = require('./routes');
 const authHandler = require('./auth/handler');
+const authRouter = require('express').Router();
 
 const app = express();
 
@@ -36,7 +37,10 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/api/auth', authHandler);
+
+authRouter.all('/', authHandler);
+authRouter.all('/:path*', authHandler);
+app.use('/api/auth', authRouter);
 app.use('/api', apiRouter);
 
 app.get('/', (_req, res) => {
