@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { getLatestPlan } from '../services/api/plans';
 import { checkInWorkout, logWorkout } from '../services/api/workouts';
+import { logout as apiLogout } from '../services/api/auth';
 
 const AppContext = createContext();
 
@@ -20,7 +21,12 @@ export const AppProvider = ({ children }) => {
     setPlanLoaded(false);
   }, []);
 
-  const logout = useCallback(() => {
+  const logout = useCallback(async () => {
+    try {
+      await apiLogout();
+    } catch (error) {
+      console.warn('Failed to sign out server session', error);
+    }
     setAuthToken(null);
     setUser(null);
     setPlan(null);

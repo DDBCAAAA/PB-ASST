@@ -14,7 +14,7 @@ const normalizeBaseUrl = (value) => {
   return value;
 };
 
-const API_BASE_URL = (() => {
+export const API_BASE_URL = (() => {
   const envUrl = normalizeBaseUrl(process.env.EXPO_PUBLIC_API_URL);
   const isBrowser = typeof window !== 'undefined';
 
@@ -46,7 +46,7 @@ const defaultHeaders = {
 
 // Lightweight wrapper over fetch that injects auth headers and stringifies JSON bodies.
 export const request = async (path, options = {}) => {
-  const { token, body, headers = {}, method = 'GET', ...rest } = options;
+  const { token, body, headers = {}, method = 'GET', credentials: credentialsMode, ...rest } = options;
 
   const finalHeaders = {
     ...defaultHeaders,
@@ -68,6 +68,7 @@ export const request = async (path, options = {}) => {
     method: upperMethod,
     headers: finalHeaders,
     body: upperMethod === 'GET' || upperMethod === 'HEAD' ? undefined : finalBody,
+    credentials: credentialsMode || 'include',
     ...rest,
   });
 

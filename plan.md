@@ -195,3 +195,15 @@ This plan outlines the steps to build an AI-powered running coach mobile app.
 1.  [x] Update backend auth handling so WeChat mock logins succeed without credentials.
 2.  [x] Enable a Google login option that works without full OAuth configuration (mock fallback).
 3.  [x] Run the build command and document verification steps.
+
+---
+
+### **Phase 9: Auth.js Migration**
+
+**Objective:** Replace the bespoke login flows with Auth.js (NextAuth) while preserving existing providers.
+
+**Tasks:**
+
+1.  [x] Add Auth.js route handlers and configuration to manage WeChat, Google, Apple, and guest sessions.
+2.  [x] Update the frontend to authenticate via Auth.js endpoints.
+3.  [x] Run the build command and document verification steps.
