@@ -183,3 +183,15 @@ This plan outlines the steps to build an AI-powered running coach mobile app.
 1.  [x] Convert the best race time field to an `HH:MM:SS` picker UI with dropdown controls.
 2.  [x] Persist the selected time by converting it to seconds when saving the profile.
 3.  [x] Run the build command and document verification steps.
+
+---
+
+### **Phase 8: Auth Provider Hardening**
+
+**Objective:** Stabilize social login flows in the hosted environment.
+
+**Tasks:**
+
+1.  [x] Update backend auth handling so WeChat mock logins succeed without credentials.
+2.  [x] Enable a Google login option that works without full OAuth configuration (mock fallback).
+3.  [x] Run the build command and document verification steps.

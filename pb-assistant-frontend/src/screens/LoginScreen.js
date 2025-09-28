@@ -18,7 +18,8 @@ const GOOGLE_CLIENT_IDS = {
   webClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID,
 };
 
-const GOOGLE_ENABLED = Boolean(GOOGLE_CLIENT_IDS.webClientId);
+const GOOGLE_OAUTH_ENABLED = Boolean(GOOGLE_CLIENT_IDS.webClientId);
+const GOOGLE_MOCK_ENABLED = process.env.EXPO_PUBLIC_ENABLE_GOOGLE_MOCK !== 'false';
 
 const LoginScreen = () => {
   const theme = useTheme();
@@ -146,8 +147,17 @@ const LoginScreen = () => {
           onPress={handleGuestLogin}
         />
 
-        {GOOGLE_ENABLED ? (
-          <GoogleLoginButton
+        {GOOGLE_OAUTH_ENABLED ? (
+          <GoogleOAuthLoginButton
+            theme={theme}
+            activeProvider={activeProvider}
+            setActiveProvider={setActiveProvider}
+            isLoggingIn={isLoggingIn}
+            setError={setError}
+            finalizeLogin={finalizeLogin}
+          />
+        ) : GOOGLE_MOCK_ENABLED ? (
+          <GoogleMockLoginButton
             theme={theme}
             activeProvider={activeProvider}
             setActiveProvider={setActiveProvider}
@@ -198,7 +208,7 @@ const AuthButton = ({
   </Pressable>
 );
 
-const GoogleLoginButton = ({
+const GoogleOAuthLoginButton = ({
   theme,
   activeProvider,
   setActiveProvider,
@@ -280,6 +290,40 @@ const GoogleLoginButton = ({
       isActive={activeProvider === 'google'}
       disabled={isLoggingIn && activeProvider !== 'google'}
       onPress={handleGoogleLogin}
+    />
+  );
+};
+
+const GoogleMockLoginButton = ({
+  theme,
+  activeProvider,
+  setActiveProvider,
+  isLoggingIn,
+  setError,
+  finalizeLogin,
+}) => {
+  const handleMockLogin = async () => {
+    setError(null);
+    setActiveProvider('google');
+
+    try {
+      await finalizeLogin('google', `google-mock-${Date.now()}`);
+    } catch (mockError) {
+      setError(mockError.message || 'Google login failed.');
+    } finally {
+      setActiveProvider(null);
+    }
+  };
+
+  return (
+    <AuthButton
+      label="Login with Google"
+      backgroundColor="#ffffff"
+      textColor={theme.palette.text}
+      borderColor="#e2e8f0"
+      isActive={activeProvider === 'google'}
+      disabled={isLoggingIn && activeProvider !== 'google'}
+      onPress={handleMockLogin}
     />
   );
 };
