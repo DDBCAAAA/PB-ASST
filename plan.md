@@ -171,3 +171,15 @@ This plan outlines the steps to build an AI-powered running coach mobile app.
 3.  [x] Validate the fix locally (including build) and outline next deployment steps.
 4.  [x] Resolve the remaining production CORS/preflight failure hitting `/auth/oauth`.
 5.  [x] Rebuild and document verification steps post-fix.
+
+---
+
+### **Phase 7: Onboarding UX Polish**
+
+**Objective:** Improve the user experience of the best race time input in onboarding.
+
+**Tasks:**
+
+1.  [x] Convert the best race time field to an `HH:MM:SS` picker UI with dropdown controls.
+2.  [x] Persist the selected time by converting it to seconds when saving the profile.
+3.  [x] Run the build command and document verification steps.
